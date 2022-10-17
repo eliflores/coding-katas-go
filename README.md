@@ -1,2 +1,6 @@
-# coding-katas-go
-Coding Katas written in Go 
+# Coding Katas Go 
+
+[Go](https://go.dev/) solutions for Katas from
+* [LeetCode](https://leetcode.com/) 🧡
+* And more... 🌈
+
