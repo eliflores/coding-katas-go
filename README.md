@@ -17,4 +17,4 @@
 6. Run the linting: `golangci-lint run`
    * Checkout the version of `golangci-lint` to use in the [CI workflow](.github/workflows/ci.yml).
 7. Write the tests, write the code, lint the code, and have fun!
-8. Open a Pull Requests, wait for all the checks to pass, and merge! :tada:
+8. Open a Pull Request, wait for all the checks to pass, and merge! :tada:
