@@ -12,6 +12,10 @@ import (
 // There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 // Find two lines that together with the x-axis form a container, such that the container contains the most water.
 func maxArea(height []int) int {
+	if len(height) < 2 {
+		return 0
+	}
+
 	pointLeft := 0
 	pointRight := len(height) - 1
 	h := int(math.Min(float64(height[pointLeft]), float64(height[pointRight])))
