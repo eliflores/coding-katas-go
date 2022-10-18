@@ -10,7 +10,8 @@
 ## How to work with this repository
 
 1. Clone the repository
-2. Install the version of go required in [go.mod](go.mod)
+2. Install the version of [go](https://go.dev/) required in [go.mod](go.mod)
+  * _Hint_: You may use [gvm](https://github.com/moovweb/gvm) to manage different versions of go.
 3. Run: `go mod tidy`
 4. Run: `go mod vendor`
 5. Run the tests: `go test -v ./...`
