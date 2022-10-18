@@ -22,6 +22,7 @@ jobs:
         with:
           version: v1.50.0
   test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
