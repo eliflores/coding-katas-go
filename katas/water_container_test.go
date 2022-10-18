@@ -33,6 +33,14 @@ func TestMaxArea(t *testing.T) {
 			[]int{1, 1},
 			1,
 		},
+		{
+			[]int{1},
+			0,
+		},
+		{
+			[]int{},
+			0,
+		},
 	}
 
 	for _, test := range tests {
