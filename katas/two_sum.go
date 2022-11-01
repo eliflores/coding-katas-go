@@ -18,12 +18,17 @@ func twoSum(nums []int, target int) []int {
 		return []int{0, 1}
 	}
 
+	numToIdx := make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		numToIdx[nums[i]] = i
+	}
+
 	var difference int
 	for i := 0; i < len(nums); i++ {
 		difference = target - nums[i]
-		for j := i + 1; j < len(nums); j++ {
-			if difference == nums[j] {
-				return []int{i, j}
+		if idx, found := numToIdx[difference]; found {
+			if i != idx {
+				return []int{i, idx}
 			}
 		}
 	}
