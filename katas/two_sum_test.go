@@ -15,12 +15,17 @@ func TestTwoSum(t *testing.T) {
 		{
 			[]int{},
 			0,
-			[]int{},
+			nil,
 		},
 		{
 			[]int{1},
 			0,
-			[]int{},
+			nil,
+		},
+		{
+			[]int{3, 3, 3},
+			5,
+			nil,
 		},
 		{
 			[]int{3, 3},
@@ -47,12 +52,6 @@ func TestTwoSum(t *testing.T) {
 			[]int{-1, -2, -3, -4, -5},
 			-8,
 			[]int{2, 4},
-		},
-
-		{
-			[]int{3, 3, 3},
-			5,
-			[]int{},
 		},
 	}
 
