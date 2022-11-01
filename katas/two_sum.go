@@ -8,7 +8,7 @@ package katas
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 // You can return the answer in any order.
 func twoSum(nums []int, target int) []int {
-	numToIdx := make(map[int]int)
+	numToIdx := make(map[int]int, len(nums))
 
 	for i, num := range nums {
 		if idx, found := numToIdx[target-num]; found {
