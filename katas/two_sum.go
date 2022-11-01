@@ -18,19 +18,15 @@ func twoSum(nums []int, target int) []int {
 		return []int{0, 1}
 	}
 
-	numToIdx := make(map[int]int)
-	for i := 0; i < len(nums); i++ {
-		numToIdx[nums[i]] = i
-	}
-
 	var difference int
+	numToIdx := make(map[int]int)
+
 	for i := 0; i < len(nums); i++ {
 		difference = target - nums[i]
 		if idx, found := numToIdx[difference]; found {
-			if i != idx {
-				return []int{i, idx}
-			}
+			return []int{idx, i}
 		}
+		numToIdx[nums[i]] = i
 	}
 
 	// It is assumed that there will always be solution, but if there isn't, we return an empty array.
