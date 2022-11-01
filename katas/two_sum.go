@@ -8,11 +8,6 @@ package katas
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 // You can return the answer in any order.
 func twoSum(nums []int, target int) (result []int) {
-	// Based on the constraint that there is always exactly one solution
-	if len(nums) == 2 {
-		return []int{0, 1}
-	}
-
 	var difference int
 	numToIdx := make(map[int]int)
 
