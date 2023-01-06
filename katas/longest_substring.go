@@ -5,30 +5,24 @@ package katas
 
 // Given a string s, find the length of the longest substring without repeating characters.
 func lengthOfLongestSubstring(s string) int {
-	max := 0
+	letters := make(map[uint8]int16, len(s))
 	n := len(s)
+	left := 0
+	max := 0
 
-	for i := 0; i < n; i++ {
-		for j := i; j < n; j++ {
-			if uniqueLetters(s, i, j) {
-				if j-i+1 > max {
-					max = j - i + 1
-				}
-			}
+	for right := 0; right < n; right++ {
+		letterRight := s[right]
+		letters[letterRight] = letters[letterRight] + 1
+
+		for letters[letterRight] > 1 {
+			letterLeft := s[left]
+			letters[letterLeft] = letters[letterLeft] - 1
+			left++
+		}
+
+		if right-left+1 > max {
+			max = right - left + 1
 		}
 	}
 	return max
-}
-
-func uniqueLetters(s string, start int, end int) bool {
-	var letters = make(map[uint8]bool, len(s))
-	for i := start; i <= end; i++ {
-		letter := s[i]
-		if _, exists := letters[letter]; exists {
-			return false
-		} else {
-			letters[letter] = true
-		}
-	}
-	return true
 }
