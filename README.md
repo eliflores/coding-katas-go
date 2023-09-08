@@ -9,7 +9,7 @@
 
 ## How to work with this repository
 
-### On yur local host 
+### On your local host 
 
 1. Clone the repository
 2. Install the version of [go](https://go.dev/) required in [go.mod](go.mod)
