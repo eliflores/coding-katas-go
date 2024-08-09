@@ -2,6 +2,7 @@
 
 ![CI](https://github.com/eliflores/coding-katas-go/workflows/CI/badge.svg)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 [Go](https://go.dev/) solutions for Katas from
 * [LeetCode](https://leetcode.com/) 🧡
